@@ -1,0 +1,33 @@
+[
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440000",
+    "username": "admin",
+    "password": "$2b$12$EixZaYVK1fsbw1ZfbX3OXePaWxn96p36WQoeG6Lruj3vjPGga31lW",
+    "created_at": "2024-01-15T10:30:00",
+    "role": "admin"
+  },
+  {
+    "id": "4adf6d32-e8ef-46dc-ba93-c4fea3be5944",
+    "username": "hig",
+    "password": "$2b$12$5uW2q/8DHWuohMv2GvI18.myqYEqpor/5Qvl6WKvsIifmvI0AJ.PW",
+    "created_at": "2026-02-08T21:48:52.176382"
+  },
+  {
+    "id": "e13f553e-cae7-412c-af55-95d9c0f152e1",
+    "username": "hig1",
+    "password": "$2b$12$VBl0Jb10N41XqUi7Ak4Tou57QB4axA5C63tjKAYc3NLTD/6Cj19v2",
+    "created_at": "2026-02-08T21:49:49.602922"
+  },
+  {
+    "id": "830a1ab1-a418-44d7-95f5-0c5a37a5391d",
+    "username": "hig2",
+    "password": "$5$rounds=535000$6TkiiukmOEbUYioY$5WfYusX0n1tU2sO6.S9PWxx8BRj4XR0BksX4Vwo9./4",
+    "created_at": "2026-02-08T21:54:10.917935"
+  },
+  {
+    "id": "618fe312-4e30-47fe-90d4-6c2c1c192143",
+    "username": "hig4",
+    "password": "$pbkdf2-sha256$29000$f2/NGQMghPB.r5VyDoFwLg$gXPC8cNWbpKfDLvMGcqGppjJXnsKnE8UYERkJOT0mdM",
+    "created_at": "2026-02-08T21:57:02.514470"
+  }
+]

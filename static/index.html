@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Блог</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .auth-section {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .auth-form {
+            background: #f5f5f5;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+            padding: 10px 20px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        .content-item {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        .nav {
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Добро пожаловать в блог</h1>
+    
+    <div id="auth-section" class="auth-section">
+        <!-- Здесь будет динамически загружаться информация об авторизации -->
+    </div>
+    
+    <div id="login-form-container" class="auth-form" style="display: none;">
+        <h2>Вход</h2>
+        <form id="login-form">
+            <input type="text" id="username" placeholder="Имя пользователя" required>
+            <input type="password" id="password" placeholder="Пароль" required>
+            <button type="submit">Войти</button>
+            <button type="button" onclick="document.getElementById('login-form-container').style.display='none'">Отмена</button>
+        </form>
+    </div>
+    
+    <div id="register-form-container" class="auth-form" style="display: none;">
+        <h2>Регистрация</h2>
+        <form id="register-form">
+            <input type="text" id="reg-username" placeholder="Имя пользователя" required>
+            <input type="password" id="reg-password" placeholder="Пароль" required>
+            <button type="submit">Зарегистрироваться</button>
+            <button type="button" onclick="document.getElementById('register-form-container').style.display='none'">Отмена</button>
+        </form>
+    </div>
+    
+    <h2>Последние статьи</h2>
+    <div id="content">
+        <!-- Здесь будут загружаться статьи -->
+    </div>
+    
+    <script src="/static/script.js"></script>
+    <script>
+        // Показываем нужную форму если есть параметр в URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const show = urlParams.get('show');
+        
+        if (show === 'login') {
+            showLoginForm();
+        } else if (show === 'register') {
+            showRegisterForm();
+        }
+    </script>
+</body>
+</html>

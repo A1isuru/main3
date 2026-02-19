@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный кабинет</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        .nav {
+            display: flex;
+            gap: 10px;
+            margin: 20px 0;
+        }
+        button {
+            padding: 10px 20px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        .content-item {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        .editor input, .editor textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .editor textarea {
+            height: 200px;
+        }
+        .profile p {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Личный кабинет</h1>
+        <div>
+            <span>Пользователь: <span id="user-info"></span></span>
+            <button onclick="logout()">Выйти</button>
+        </div>
+    </div>
+    
+    <div class="nav">
+        <button onclick="loadContentList()">Мои статьи</button>
+        <button onclick="showAddForm()">Добавить статью</button>
+        <button onclick="showProfile()">Профиль</button>
+    </div>
+    
+    <div id="dashboard-content">
+        <!-- Здесь будет динамически загружаться контент -->
+    </div>
+    
+    <script src="/static/script.js"></script>
+</body>
+</html>
